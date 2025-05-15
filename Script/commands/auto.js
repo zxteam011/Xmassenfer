@@ -3,7 +3,7 @@ module.exports = {
  name: "auto",
  version: "0.0.2",
  hasPermssion: 0,
- credits: "Nazrul",
+ credits: "SHAON",
  description: "auto video download",
  commandCategory: "user",
  usages: "",
