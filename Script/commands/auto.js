@@ -18,7 +18,7 @@ handleEvent: async function ({ api, event, args }) {
  const body = content.toLowerCase();
  const {alldl} = require("shaon-videos-downloader")
  if (body.startsWith("https://")) {
- api.setMessageReaction("💔", event.messageID, (err) => {}, true);
+ api.setMessageReaction("⚠️", event.messageID, (err) => {}, true);
 const data = await alldl(content);
  console.log(data)
  let Shaon = data.videos[0].url;
