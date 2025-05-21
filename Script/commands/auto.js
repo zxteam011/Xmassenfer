@@ -1,6 +1,6 @@
 module.exports = {
  config:{
- name: "auto",
+ name: "autodl",
  version: "0.0.2",
  hasPermssion: 0,
  credits: "SHAON",
@@ -16,12 +16,12 @@ handleEvent: async function ({ api, event, args }) {
  const fs = require("fs-extra")
  const content = event.body ? event.body : '';
  const body = content.toLowerCase();
- const {alldl} = require("shaon-videos-downloader")
+ const { alldown } = require("shaon-videos-downloader")
  if (body.startsWith("https://")) {
  api.setMessageReaction("⚠️", event.messageID, (err) => {}, true);
-const data = await alldl(content);
+const data = await alldown(content);
  console.log(data)
- let Shaon = data.videos[0].url;
+ let Shaon = data.url;
  api.setMessageReaction("☢️", event.messageID, (err) => {}, true);
  const video = (await axios.get(Shaon, {
  responseType: "arraybuffer",
